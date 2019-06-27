@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MetodoTest">
+        <s:complexType />
+      </s:element>
+      <s:element name="MetodoTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MetodoTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcquisisceCodice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdLine" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcquisisceCodiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AcquisisceCodiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcquisisceMisure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdMeasure" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="JSON" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcquisisceMisureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AcquisisceMisureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MetodoTestSoapIn">
+    <wsdl:part name="parameters" element="tns:MetodoTest" />
+  </wsdl:message>
+  <wsdl:message name="MetodoTestSoapOut">
+    <wsdl:part name="parameters" element="tns:MetodoTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcquisisceCodiceSoapIn">
+    <wsdl:part name="parameters" element="tns:AcquisisceCodice" />
+  </wsdl:message>
+  <wsdl:message name="AcquisisceCodiceSoapOut">
+    <wsdl:part name="parameters" element="tns:AcquisisceCodiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcquisisceMisureSoapIn">
+    <wsdl:part name="parameters" element="tns:AcquisisceMisure" />
+  </wsdl:message>
+  <wsdl:message name="AcquisisceMisureSoapOut">
+    <wsdl:part name="parameters" element="tns:AcquisisceMisureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CertixServicesSoap">
+    <wsdl:operation name="TestMethod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo per test connessione</wsdl:documentation>
+      <wsdl:input name="MetodoTest" message="tns:MetodoTestSoapIn" />
+      <wsdl:output name="MetodoTest" message="tns:MetodoTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Acquisizione codice a barre</wsdl:documentation>
+      <wsdl:input name="AcquisisceCodice" message="tns:AcquisisceCodiceSoapIn" />
+      <wsdl:output name="AcquisisceCodice" message="tns:AcquisisceCodiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMeasures">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Acquisisce le misure</wsdl:documentation>
+      <wsdl:input name="AcquisisceMisure" message="tns:AcquisisceMisureSoapIn" />
+      <wsdl:output name="AcquisisceMisure" message="tns:AcquisisceMisureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CertixServicesSoap" type="tns:CertixServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestMethod">
+      <soap:operation soapAction="http://tempuri.org/MetodoTest" style="document" />
+      <wsdl:input name="MetodoTest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MetodoTest">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCode">
+      <soap:operation soapAction="http://tempuri.org/AcquisisceCodice" style="document" />
+      <wsdl:input name="AcquisisceCodice">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AcquisisceCodice">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMeasures">
+      <soap:operation soapAction="http://tempuri.org/AcquisisceMisure" style="document" />
+      <wsdl:input name="AcquisisceMisure">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AcquisisceMisure">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CertixServicesSoap12" type="tns:CertixServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestMethod">
+      <soap12:operation soapAction="http://tempuri.org/MetodoTest" style="document" />
+      <wsdl:input name="MetodoTest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MetodoTest">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCode">
+      <soap12:operation soapAction="http://tempuri.org/AcquisisceCodice" style="document" />
+      <wsdl:input name="AcquisisceCodice">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AcquisisceCodice">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMeasures">
+      <soap12:operation soapAction="http://tempuri.org/AcquisisceMisure" style="document" />
+      <wsdl:input name="AcquisisceMisure">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AcquisisceMisure">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CertixServices">
+    <wsdl:port name="CertixServicesSoap" binding="tns:CertixServicesSoap">
+      <soap:address location="http://localhost:54359/CertixServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CertixServicesSoap12" binding="tns:CertixServicesSoap12">
+      <soap12:address location="http://localhost:54359/CertixServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertixWS", "CertixWS\CertixWS.csproj", "{6EC0FA56-AE67-4E7E-BF9B-25B35925DAE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{B885069E-E333-41E3-A8CA-F5EBC8CF8ACA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6EC0FA56-AE67-4E7E-BF9B-25B35925DAE8} = {6EC0FA56-AE67-4E7E-BF9B-25B35925DAE8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertixWS.Models", "CertixWS.Models\CertixWS.Models.csproj", "{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertixWS.Entities", "CertixWS.Entities\CertixWS.Entities.csproj", "{8D8D5DEB-CC5C-4824-8989-76262EBBD593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertixWS.Data", "CertixWS.Data\CertixWS.Data.csproj", "{6F3A46FB-8905-4CA9-B0B9-6C8C43F2905F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertixWS.BLL", "CertixWS.BLL\CertixWS.BLL.csproj", "{2B7EC684-D50A-4714-9DF4-2C37F8CB9A4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EC0FA56-AE67-4E7E-BF9B-25B35925DAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC0FA56-AE67-4E7E-BF9B-25B35925DAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC0FA56-AE67-4E7E-BF9B-25B35925DAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC0FA56-AE67-4E7E-BF9B-25B35925DAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B885069E-E333-41E3-A8CA-F5EBC8CF8ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B885069E-E333-41E3-A8CA-F5EBC8CF8ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B885069E-E333-41E3-A8CA-F5EBC8CF8ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B885069E-E333-41E3-A8CA-F5EBC8CF8ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D8D5DEB-CC5C-4824-8989-76262EBBD593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8D5DEB-CC5C-4824-8989-76262EBBD593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8D5DEB-CC5C-4824-8989-76262EBBD593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8D5DEB-CC5C-4824-8989-76262EBBD593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3A46FB-8905-4CA9-B0B9-6C8C43F2905F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3A46FB-8905-4CA9-B0B9-6C8C43F2905F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3A46FB-8905-4CA9-B0B9-6C8C43F2905F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3A46FB-8905-4CA9-B0B9-6C8C43F2905F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B7EC684-D50A-4714-9DF4-2C37F8CB9A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7EC684-D50A-4714-9DF4-2C37F8CB9A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7EC684-D50A-4714-9DF4-2C37F8CB9A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7EC684-D50A-4714-9DF4-2C37F8CB9A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B6912DD-89EF-40EB-AE13-175D0CD18EB4}
+	EndGlobalSection
+EndGlobal
