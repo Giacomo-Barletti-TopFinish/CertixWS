@@ -47,6 +47,7 @@
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -60,7 +61,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
@@ -101,6 +101,20 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CertixWS.BLL\CertixWS.BLL.csproj">
+      <Project>{2B7EC684-D50A-4714-9DF4-2C37F8CB9A4F}</Project>
+      <Name>CertixWS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CertixWS.Common\CertixWS.Common.csproj">
+      <Project>{64C7E5A8-9629-44D3-A272-EDA6375AB508}</Project>
+      <Name>CertixWS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CertixWS.Models\CertixWS.Models.csproj">
+      <Project>{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}</Project>
+      <Name>CertixWS.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

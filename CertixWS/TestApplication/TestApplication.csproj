@@ -117,5 +117,15 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CertixWS.Common\CertixWS.Common.csproj">
+      <Project>{64C7E5A8-9629-44D3-A272-EDA6375AB508}</Project>
+      <Name>CertixWS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CertixWS.Models\CertixWS.Models.csproj">
+      <Project>{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}</Project>
+      <Name>CertixWS.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

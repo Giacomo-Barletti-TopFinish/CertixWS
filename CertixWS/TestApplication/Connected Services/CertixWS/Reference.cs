@@ -12,35 +12,35 @@ namespace TestApplication.CertixWS {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CertixWS.CertixServicesSoap")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://CertixWS.org/", ConfigurationName="CertixWS.CertixServicesSoap")]
     public interface CertixServicesSoap {
         
         // CODEGEN: Generating message contract since the wrapper name (MetodoTest) of message MetodoTest does not match the default value (TestMethod)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MetodoTest", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://CertixWS.org/MetodoTest", ReplyAction="*")]
         TestApplication.CertixWS.MetodoTest1 TestMethod(TestApplication.CertixWS.MetodoTest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MetodoTest", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://CertixWS.org/MetodoTest", ReplyAction="*")]
         System.Threading.Tasks.Task<TestApplication.CertixWS.MetodoTest1> TestMethodAsync(TestApplication.CertixWS.MetodoTest request);
         
         // CODEGEN: Generating message contract since the wrapper name (AcquisisceCodice) of message AcquisisceCodice does not match the default value (UploadCode)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AcquisisceCodice", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://CertixWS.org/AcquisisceCodice", ReplyAction="*")]
         TestApplication.CertixWS.AcquisisceCodice1 UploadCode(TestApplication.CertixWS.AcquisisceCodice request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AcquisisceCodice", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://CertixWS.org/AcquisisceCodice", ReplyAction="*")]
         System.Threading.Tasks.Task<TestApplication.CertixWS.AcquisisceCodice1> UploadCodeAsync(TestApplication.CertixWS.AcquisisceCodice request);
         
         // CODEGEN: Generating message contract since the wrapper name (AcquisisceMisure) of message AcquisisceMisure does not match the default value (UploadMeasures)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AcquisisceMisure", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://CertixWS.org/AcquisisceMisure", ReplyAction="*")]
         TestApplication.CertixWS.AcquisisceMisure1 UploadMeasures(TestApplication.CertixWS.AcquisisceMisure request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AcquisisceMisure", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://CertixWS.org/AcquisisceMisure", ReplyAction="*")]
         System.Threading.Tasks.Task<TestApplication.CertixWS.AcquisisceMisure1> UploadMeasuresAsync(TestApplication.CertixWS.AcquisisceMisure request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="MetodoTest", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="MetodoTest", WrapperNamespace="http://CertixWS.org/", IsWrapped=true)]
     public partial class MetodoTest {
         
         public MetodoTest() {
@@ -50,10 +50,10 @@ namespace TestApplication.CertixWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="MetodoTestResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="MetodoTestResponse", WrapperNamespace="http://CertixWS.org/", IsWrapped=true)]
     public partial class MetodoTest1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CertixWS.org/", Order=0)]
         public string MetodoTestResult;
         
         public MetodoTest1() {
@@ -67,13 +67,13 @@ namespace TestApplication.CertixWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceCodice", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceCodice", WrapperNamespace="http://CertixWS.org/", IsWrapped=true)]
     public partial class AcquisisceCodice {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CertixWS.org/", Order=0)]
         public int IdLine;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CertixWS.org/", Order=1)]
         public string Code;
         
         public AcquisisceCodice() {
@@ -88,10 +88,10 @@ namespace TestApplication.CertixWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceCodiceResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceCodiceResponse", WrapperNamespace="http://CertixWS.org/", IsWrapped=true)]
     public partial class AcquisisceCodice1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CertixWS.org/", Order=0)]
         public string AcquisisceCodiceResult;
         
         public AcquisisceCodice1() {
@@ -105,13 +105,13 @@ namespace TestApplication.CertixWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceMisure", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceMisure", WrapperNamespace="http://CertixWS.org/", IsWrapped=true)]
     public partial class AcquisisceMisure {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CertixWS.org/", Order=0)]
         public int IdMeasure;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CertixWS.org/", Order=1)]
         public string JSON;
         
         public AcquisisceMisure() {
@@ -126,10 +126,10 @@ namespace TestApplication.CertixWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceMisureResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AcquisisceMisureResponse", WrapperNamespace="http://CertixWS.org/", IsWrapped=true)]
     public partial class AcquisisceMisure1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CertixWS.org/", Order=0)]
         public string AcquisisceMisureResult;
         
         public AcquisisceMisure1() {
