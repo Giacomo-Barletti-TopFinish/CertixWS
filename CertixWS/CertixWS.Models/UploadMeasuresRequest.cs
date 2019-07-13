@@ -13,6 +13,6 @@ namespace CertixWS.Models
         [DataMember(Name = "Material")]
         public string Material { get; set; }
         [DataMember(Name = "Measure")]
-        public float Measure { get; set; }
+        public decimal Measure { get; set; }
     }
 }

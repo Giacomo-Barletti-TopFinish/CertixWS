@@ -41,17 +41,17 @@ namespace TestApplication
             List<UploadMeasuresElementRequest> measures = new List<UploadMeasuresElementRequest>();
             UploadMeasuresElementRequest e1 = new UploadMeasuresElementRequest();
             e1.Material = txtMaterial1.Text;
-            e1.Measure = (float)nMeasure1.Value;
+            e1.Measure = nMeasure1.Value;
             measures.Add(e1);
 
             UploadMeasuresElementRequest e2 = new UploadMeasuresElementRequest();
             e2.Material = txtMaterial2.Text;
-            e2.Measure = (float)nMeasure2.Value;
+            e2.Measure = nMeasure2.Value;
             measures.Add(e2);
 
             UploadMeasuresElementRequest e3 = new UploadMeasuresElementRequest();
             e3.Material = txtMaterial3.Text;
-            e3.Measure = (float)nMeasure3.Value;
+            e3.Measure = nMeasure3.Value;
             measures.Add(e3);
 
             string json = JSonSerializer.Serialize<List<UploadMeasuresElementRequest>>(measures);

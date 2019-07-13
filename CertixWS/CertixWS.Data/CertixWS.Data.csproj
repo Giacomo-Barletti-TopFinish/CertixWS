@@ -59,5 +59,11 @@
     <Compile Include="CertixWSBusiness.cs" />
     <Compile Include="CertixWSBusinessBase.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CertixWS.Entities\CertixWS.Entities.csproj">
+      <Project>{8D8D5DEB-CC5C-4824-8989-76262EBBD593}</Project>
+      <Name>CertixWS.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

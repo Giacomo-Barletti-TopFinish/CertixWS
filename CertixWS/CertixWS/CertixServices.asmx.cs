@@ -38,8 +38,9 @@ namespace CertixWS
             try
             {
                 CertixBLL bll = new CertixBLL();
-                int IdMeasure = bll.CreateIdMeasureFromCodeAndIdLine(IdLine, Code, Properties.Settings.Default.IsTest);
-                List<string> Measures = bll.CreateMaterialsListFromCode(Code, Properties.Settings.Default.IsTest);
+
+                List<string> Measures;
+                int IdMeasure = bll.CreateIdMeasureFromCodeAndIdLine(IdLine, Code, Properties.Settings.Default.IsTest,out Measures);
 
                 UploadCodeResponse response = new UploadCodeResponse();
                 response.Status = Status.OK;

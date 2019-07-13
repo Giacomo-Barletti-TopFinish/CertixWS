@@ -46,6 +46,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CertixWS.Data\CertixWS.Data.csproj">
+      <Project>{6F3A46FB-8905-4CA9-B0B9-6C8C43F2905F}</Project>
+      <Name>CertixWS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CertixWS.Entities\CertixWS.Entities.csproj">
+      <Project>{8D8D5DEB-CC5C-4824-8989-76262EBBD593}</Project>
+      <Name>CertixWS.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CertixWS.Models\CertixWS.Models.csproj">
       <Project>{37DAF5CB-260A-4384-A0E9-F87735D8D6AC}</Project>
       <Name>CertixWS.Models</Name>
