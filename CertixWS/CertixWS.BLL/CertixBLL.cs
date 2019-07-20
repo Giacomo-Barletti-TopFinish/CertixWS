@@ -69,7 +69,7 @@ namespace CertixWS.BLL
                 certixRow.BARCODE = Code;
                 certixRow.IDMAGAZZ = movFase.IDMAGAZZ;
                 certixRow.IDMAGAZZ_WIP = faseGalvanica.IDMAGAZZ;
-
+                certixRow.DATAMISURA = DateTime.Now;
                 ds.AP_CERTIX.AddAP_CERTIXRow(certixRow);
 
                 bCertix.UpdateTable(ds.AP_CERTIX.TableName, ds);
@@ -79,7 +79,7 @@ namespace CertixWS.BLL
             return idMeasure;
         }
 
-        private CertixDS.USR_PRD_MOVFASIRow VerificaBarcodeODL(string barcode, CertixDS ds)
+        public CertixDS.USR_PRD_MOVFASIRow VerificaBarcodeODL(string barcode, CertixDS ds)
         {
             using (CertixWSBusiness bCertix = new CertixWSBusiness())
             {
@@ -89,7 +89,7 @@ namespace CertixWS.BLL
         }
 
 
-        private CertixDS.USR_PRD_FASIRow EstraiFaseGalvanicaDaODL(CertixDS.USR_PRD_MOVFASIRow movFase, CertixDS ds)
+        public CertixDS.USR_PRD_FASIRow EstraiFaseGalvanicaDaODL(CertixDS.USR_PRD_MOVFASIRow movFase, CertixDS ds)
         {
             using (CertixWSBusiness bCertix = new CertixWSBusiness())
             {
@@ -138,7 +138,7 @@ namespace CertixWS.BLL
                 throw new ArgumentException(messaggio);
             }
 
-            if (!VerificaDuplicati(IdMeasure, ds))
+            if (VerificaDuplicati(IdMeasure, ds))
             {
                 string messaggio = string.Format("IdMeasure: {0} misure già acquisite", IdMeasure);
                 throw new ArgumentException(messaggio);

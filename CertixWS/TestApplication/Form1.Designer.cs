@@ -31,31 +31,31 @@
             this.txtMessaggio = new System.Windows.Forms.TextBox();
             this.btnMetodoTest = new System.Windows.Forms.Button();
             this.btnAcquisiceCodice = new System.Windows.Forms.Button();
-            this.btnAcquisisceMisure = new System.Windows.Forms.Button();
+            this.btnFinestraInserimentoDati = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.nIdLine = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.nMeasure3 = new System.Windows.Forms.NumericUpDown();
+            this.nMeasure2 = new System.Windows.Forms.NumericUpDown();
+            this.nMeasure1 = new System.Windows.Forms.NumericUpDown();
+            this.txtMaterial3 = new System.Windows.Forms.TextBox();
+            this.txtMaterial2 = new System.Windows.Forms.TextBox();
+            this.txtMaterial1 = new System.Windows.Forms.TextBox();
             this.nIdMeasure = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaterial1 = new System.Windows.Forms.TextBox();
-            this.txtMaterial2 = new System.Windows.Forms.TextBox();
-            this.txtMaterial3 = new System.Windows.Forms.TextBox();
-            this.nMeasure1 = new System.Windows.Forms.NumericUpDown();
-            this.nMeasure2 = new System.Windows.Forms.NumericUpDown();
-            this.nMeasure3 = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nIdLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nIdMeasure)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nMeasure1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nMeasure2)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nMeasure3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nMeasure2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nMeasure1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nIdMeasure)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMessaggio
@@ -89,15 +89,15 @@
             this.btnAcquisiceCodice.UseVisualStyleBackColor = true;
             this.btnAcquisiceCodice.Click += new System.EventHandler(this.btnAcquisiceCodice_Click);
             // 
-            // btnAcquisisceMisure
+            // btnFinestraInserimentoDati
             // 
-            this.btnAcquisisceMisure.Location = new System.Drawing.Point(260, 12);
-            this.btnAcquisisceMisure.Name = "btnAcquisisceMisure";
-            this.btnAcquisisceMisure.Size = new System.Drawing.Size(75, 23);
-            this.btnAcquisisceMisure.TabIndex = 1;
-            this.btnAcquisisceMisure.Text = "Acquisice misure";
-            this.btnAcquisisceMisure.UseVisualStyleBackColor = true;
-            this.btnAcquisisceMisure.Click += new System.EventHandler(this.btnAcquisisceMisure_Click);
+            this.btnFinestraInserimentoDati.Location = new System.Drawing.Point(260, 12);
+            this.btnFinestraInserimentoDati.Name = "btnFinestraInserimentoDati";
+            this.btnFinestraInserimentoDati.Size = new System.Drawing.Size(262, 23);
+            this.btnFinestraInserimentoDati.TabIndex = 1;
+            this.btnFinestraInserimentoDati.Text = "Finestra inserimento dati";
+            this.btnFinestraInserimentoDati.UseVisualStyleBackColor = true;
+            this.btnFinestraInserimentoDati.Click += new System.EventHandler(this.btnFinestraInserimentoDati_Click);
             // 
             // groupBox1
             // 
@@ -123,32 +123,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "UploadCode";
             // 
-            // groupBox3
+            // txtCode
             // 
-            this.groupBox3.Controls.Add(this.nMeasure3);
-            this.groupBox3.Controls.Add(this.nMeasure2);
-            this.groupBox3.Controls.Add(this.nMeasure1);
-            this.groupBox3.Controls.Add(this.txtMaterial3);
-            this.groupBox3.Controls.Add(this.txtMaterial2);
-            this.groupBox3.Controls.Add(this.txtMaterial1);
-            this.groupBox3.Controls.Add(this.nIdMeasure);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(482, 65);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(285, 195);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "UploadMesaures";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "IdLine";
+            this.txtCode.Location = new System.Drawing.Point(74, 50);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(120, 20);
+            this.txtCode.TabIndex = 2;
+            this.txtCode.Text = "12345678912345";
             // 
             // nIdLine
             // 
@@ -171,71 +152,68 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Code";
             // 
-            // txtCode
+            // label1
             // 
-            this.txtCode.Location = new System.Drawing.Point(74, 50);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(120, 20);
-            this.txtCode.TabIndex = 2;
-            this.txtCode.Text = "12345678912345";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "IdLine";
             // 
-            // button1
+            // groupBox3
             // 
-            this.button1.Location = new System.Drawing.Point(55, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Lancia UploadMeasures";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnAcquisisceMisure_Click);
+            this.groupBox3.Controls.Add(this.nMeasure3);
+            this.groupBox3.Controls.Add(this.nMeasure2);
+            this.groupBox3.Controls.Add(this.nMeasure1);
+            this.groupBox3.Controls.Add(this.txtMaterial3);
+            this.groupBox3.Controls.Add(this.txtMaterial2);
+            this.groupBox3.Controls.Add(this.txtMaterial1);
+            this.groupBox3.Controls.Add(this.nIdMeasure);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Location = new System.Drawing.Point(482, 65);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(285, 195);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "UploadMesaures";
             // 
-            // nIdMeasure
+            // nMeasure3
             // 
-            this.nIdMeasure.Location = new System.Drawing.Point(81, 20);
-            this.nIdMeasure.Name = "nIdMeasure";
-            this.nIdMeasure.Size = new System.Drawing.Size(95, 20);
-            this.nIdMeasure.TabIndex = 3;
-            this.nIdMeasure.Value = new decimal(new int[] {
+            this.nMeasure3.DecimalPlaces = 2;
+            this.nMeasure3.Increment = new decimal(new int[] {
             1,
             0,
             0,
-            0});
+            65536});
+            this.nMeasure3.Location = new System.Drawing.Point(137, 102);
+            this.nMeasure3.Name = "nMeasure3";
+            this.nMeasure3.Size = new System.Drawing.Size(120, 20);
+            this.nMeasure3.TabIndex = 9;
+            this.nMeasure3.Value = new decimal(new int[] {
+            33,
+            0,
+            0,
+            65536});
             // 
-            // label3
+            // nMeasure2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "IdMeasure";
-            // 
-            // txtMaterial1
-            // 
-            this.txtMaterial1.Location = new System.Drawing.Point(14, 50);
-            this.txtMaterial1.MaxLength = 10;
-            this.txtMaterial1.Name = "txtMaterial1";
-            this.txtMaterial1.Size = new System.Drawing.Size(100, 20);
-            this.txtMaterial1.TabIndex = 4;
-            this.txtMaterial1.Text = "Au";
-            // 
-            // txtMaterial2
-            // 
-            this.txtMaterial2.Location = new System.Drawing.Point(14, 76);
-            this.txtMaterial2.MaxLength = 10;
-            this.txtMaterial2.Name = "txtMaterial2";
-            this.txtMaterial2.Size = new System.Drawing.Size(100, 20);
-            this.txtMaterial2.TabIndex = 4;
-            this.txtMaterial2.Text = "Pd";
-            // 
-            // txtMaterial3
-            // 
-            this.txtMaterial3.Location = new System.Drawing.Point(14, 102);
-            this.txtMaterial3.MaxLength = 10;
-            this.txtMaterial3.Name = "txtMaterial3";
-            this.txtMaterial3.Size = new System.Drawing.Size(100, 20);
-            this.txtMaterial3.TabIndex = 4;
-            this.txtMaterial3.Text = "Ni";
+            this.nMeasure2.DecimalPlaces = 2;
+            this.nMeasure2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nMeasure2.Location = new System.Drawing.Point(137, 76);
+            this.nMeasure2.Name = "nMeasure2";
+            this.nMeasure2.Size = new System.Drawing.Size(120, 20);
+            this.nMeasure2.TabIndex = 7;
+            this.nMeasure2.Value = new decimal(new int[] {
+            22,
+            0,
+            0,
+            65536});
             // 
             // nMeasure1
             // 
@@ -255,41 +233,68 @@
             0,
             65536});
             // 
-            // nMeasure2
+            // txtMaterial3
             // 
-            this.nMeasure2.DecimalPlaces = 2;
-            this.nMeasure2.Increment = new decimal(new int[] {
+            this.txtMaterial3.Location = new System.Drawing.Point(14, 102);
+            this.txtMaterial3.MaxLength = 10;
+            this.txtMaterial3.Name = "txtMaterial3";
+            this.txtMaterial3.Size = new System.Drawing.Size(100, 20);
+            this.txtMaterial3.TabIndex = 8;
+            this.txtMaterial3.Text = "Ni";
+            // 
+            // txtMaterial2
+            // 
+            this.txtMaterial2.Location = new System.Drawing.Point(14, 76);
+            this.txtMaterial2.MaxLength = 10;
+            this.txtMaterial2.Name = "txtMaterial2";
+            this.txtMaterial2.Size = new System.Drawing.Size(100, 20);
+            this.txtMaterial2.TabIndex = 6;
+            this.txtMaterial2.Text = "Pd";
+            // 
+            // txtMaterial1
+            // 
+            this.txtMaterial1.Location = new System.Drawing.Point(14, 50);
+            this.txtMaterial1.MaxLength = 10;
+            this.txtMaterial1.Name = "txtMaterial1";
+            this.txtMaterial1.Size = new System.Drawing.Size(100, 20);
+            this.txtMaterial1.TabIndex = 4;
+            this.txtMaterial1.Text = "Au";
+            // 
+            // nIdMeasure
+            // 
+            this.nIdMeasure.Location = new System.Drawing.Point(81, 20);
+            this.nIdMeasure.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nIdMeasure.Name = "nIdMeasure";
+            this.nIdMeasure.Size = new System.Drawing.Size(95, 20);
+            this.nIdMeasure.TabIndex = 3;
+            this.nIdMeasure.Value = new decimal(new int[] {
             1,
             0,
             0,
-            65536});
-            this.nMeasure2.Location = new System.Drawing.Point(137, 76);
-            this.nMeasure2.Name = "nMeasure2";
-            this.nMeasure2.Size = new System.Drawing.Size(120, 20);
-            this.nMeasure2.TabIndex = 5;
-            this.nMeasure2.Value = new decimal(new int[] {
-            22,
-            0,
-            0,
-            65536});
+            0});
             // 
-            // nMeasure3
+            // label3
             // 
-            this.nMeasure3.DecimalPlaces = 2;
-            this.nMeasure3.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.nMeasure3.Location = new System.Drawing.Point(137, 102);
-            this.nMeasure3.Name = "nMeasure3";
-            this.nMeasure3.Size = new System.Drawing.Size(120, 20);
-            this.nMeasure3.TabIndex = 5;
-            this.nMeasure3.Value = new decimal(new int[] {
-            33,
-            0,
-            0,
-            65536});
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "IdMeasure";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(55, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Lancia UploadMeasures";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnAcquisisceMisure_Click);
             // 
             // Form1
             // 
@@ -299,7 +304,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnAcquisisceMisure);
+            this.Controls.Add(this.btnFinestraInserimentoDati);
             this.Controls.Add(this.txtMessaggio);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -308,13 +313,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nIdLine)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nIdLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nIdMeasure)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nMeasure1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nMeasure2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nMeasure3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nMeasure2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nMeasure1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nIdMeasure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +330,7 @@
         private System.Windows.Forms.TextBox txtMessaggio;
         private System.Windows.Forms.Button btnMetodoTest;
         private System.Windows.Forms.Button btnAcquisiceCodice;
-        private System.Windows.Forms.Button btnAcquisisceMisure;
+        private System.Windows.Forms.Button btnFinestraInserimentoDati;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtCode;

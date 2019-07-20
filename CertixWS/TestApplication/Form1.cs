@@ -42,22 +42,31 @@ namespace TestApplication
             UploadMeasuresElementRequest e1 = new UploadMeasuresElementRequest();
             e1.Material = txtMaterial1.Text;
             e1.Measure = nMeasure1.Value;
-            measures.Add(e1);
+            if (!String.IsNullOrEmpty(txtMaterial1.Text))
+                measures.Add(e1);
 
             UploadMeasuresElementRequest e2 = new UploadMeasuresElementRequest();
             e2.Material = txtMaterial2.Text;
             e2.Measure = nMeasure2.Value;
-            measures.Add(e2);
+            if (!String.IsNullOrEmpty(txtMaterial2.Text))
+                measures.Add(e2);
 
             UploadMeasuresElementRequest e3 = new UploadMeasuresElementRequest();
             e3.Material = txtMaterial3.Text;
             e3.Measure = nMeasure3.Value;
-            measures.Add(e3);
+            if (!String.IsNullOrEmpty(txtMaterial3.Text))
+                measures.Add(e3);
 
             string json = JSonSerializer.Serialize<List<UploadMeasuresElementRequest>>(measures);
 
             CertixWS.CertixServicesSoapClient client = new CertixWS.CertixServicesSoapClient();
             txtMessaggio.Text = client.UploadMeasures((int)nIdMeasure.Value, json);
+        }
+
+        private void btnFinestraInserimentoDati_Click(object sender, EventArgs e)
+        {
+            InserimentoDatiFrm frm = new InserimentoDatiFrm();
+            frm.ShowDialog();
         }
     }
 }

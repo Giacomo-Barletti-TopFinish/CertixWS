@@ -75,6 +75,12 @@ namespace CertixWS.Data
         }
 
         [DataContext]
+        public void FillMAGAZZ(CertixDS ds, string IDMAGAZZ)
+        {
+            FillMAGAZZ(ds, new List<string>(new string[] { IDMAGAZZ }));
+        }
+
+        [DataContext]
         public void FillAP_CERTIX(CertixDS ds, decimal IDMISURECERTIX)
         {
             CertixWSAdapter a = new CertixWSAdapter(DbConnection, DbTransaction);
@@ -100,6 +106,20 @@ namespace CertixWS.Data
         {
             CertixWSAdapter a = new CertixWSAdapter(DbConnection, DbTransaction);
             a.FillAP_CERTIX_DETTAGLIO(ds, IDMISURECERTIX);
+        }
+
+        [DataContext]
+        public void FillAP_GALVANICA_MODELLO(CertixDS ds, string IDMAGAZZ, string IDMAGAZZ_WIP)
+        {
+            CertixWSAdapter a = new CertixWSAdapter(DbConnection, DbTransaction);
+            a.FillAP_GALVANICA_MODELLO(ds, IDMAGAZZ, IDMAGAZZ_WIP);
+        }
+
+        [DataContext]
+        public void FillAP_GALVANICA_SPESSORI(string Brand, string Finitura, CertixDS ds)
+        {
+            CertixWSAdapter a = new CertixWSAdapter(DbConnection, DbTransaction);
+            a.FillAP_GALVANICA_SPESSORI(Brand, Finitura, ds);
         }
     }
 }

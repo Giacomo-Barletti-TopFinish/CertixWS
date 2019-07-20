@@ -74,7 +74,6 @@ namespace CertixWS.Data
 
             string select = @"select sp.* from ap_galvanica_spessori sp
                                 inner join ap_galvanica_modello mo on mo.brand = sp.brand and mo.finitura = sp.finitura
-                                and mo.materiale = sp.materiale
                                 where mo.idmagazz = $P{IDMAGAZZ} and mo.idmagazz_wip = $P{IDMAGAZZ_WIP}";
 
             ParamSet ps = new ParamSet();
@@ -84,6 +83,38 @@ namespace CertixWS.Data
             using (DbDataAdapter da = BuildDataAdapter(select, ps))
             {
                 da.Fill(ds.AP_GALVANICA_SPESSORI);
+            }
+        }
+
+        public void FillAP_GALVANICA_SPESSORI(string Brand, string Finitura, CertixDS ds)
+        {
+
+            string select = @"select sp.* from ap_galvanica_spessori sp
+                                where sp.brand = $P{BRAND} 
+                            and sp.finitura = $P{FINITURA}";
+
+            ParamSet ps = new ParamSet();
+            ps.AddParam("BRAND", DbType.String, Brand);
+            ps.AddParam("FINITURA", DbType.String, Finitura);
+
+            using (DbDataAdapter da = BuildDataAdapter(select, ps))
+            {
+                da.Fill(ds.AP_GALVANICA_SPESSORI);
+            }
+        }
+        public void FillAP_GALVANICA_MODELLO(CertixDS ds, string IDMAGAZZ, string IDMAGAZZ_WIP)
+        {
+
+            string select = @"select mo.* from ap_galvanica_modello mo 
+                            where mo.idmagazz = $P{IDMAGAZZ} and mo.idmagazz_wip = $P{IDMAGAZZ_WIP}";
+
+            ParamSet ps = new ParamSet();
+            ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
+            ps.AddParam("IDMAGAZZ_WIP", DbType.String, IDMAGAZZ_WIP);
+
+            using (DbDataAdapter da = BuildDataAdapter(select, ps))
+            {
+                da.Fill(ds.AP_GALVANICA_MODELLO);
             }
         }
 
@@ -117,7 +148,7 @@ namespace CertixWS.Data
         public void FillAP_CERTIX(CertixDS ds, Decimal IDMISURECERTIX)
         {
 
-            string select = @"select sp.* from AP_CERTIX where IDMISURECERTIX = $P{IDMISURECERTIX}";
+            string select = @"select * from AP_CERTIX where IDMISURECERTIX = $P{IDMISURECERTIX}";
 
             ParamSet ps = new ParamSet();
             ps.AddParam("IDMISURECERTIX", DbType.Decimal, IDMISURECERTIX);
@@ -131,7 +162,7 @@ namespace CertixWS.Data
         public void FillAP_CERTIX_DETTAGLIO(CertixDS ds, Decimal IDMISURECERTIX)
         {
 
-            string select = @"select sp.* from AP_CERTIX_DETTAGLIO where IDMISURECERTIX = $P{IDMISURECERTIX}";
+            string select = @"select * from AP_CERTIX_DETTAGLIO where IDMISURECERTIX = $P{IDMISURECERTIX}";
 
             ParamSet ps = new ParamSet();
             ps.AddParam("IDMISURECERTIX", DbType.Decimal, IDMISURECERTIX);
